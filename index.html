@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PATA | Smarter Sourcing. Better Access.</title>
+<meta name="description" content="PATA connects businesses, traders, and contractors to affordable sources across multiple categories. Smarter sourcing. Better access.">
+<meta name="keywords" content="procurement, sourcing, suppliers, wholesale, contractors, traders, Kenya">
+<meta name="author" content="PATA">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#0B1F3A;
+--deep:#071428;
+--green:#1B7A5A;
+--green-light:#26A87A;
+--gold:#C8A84B;
+--white:#F4F2EC;
+--muted:#8A9BAD;
+--card:rgba(255,255,255,0.04);
+--border:rgba(255,255,255,0.08);
+}
+html{scroll-behavior:smooth}
+body{
+font-family:'DM Sans',sans-serif;
+background:var(--deep);
+color:var(--white);
+overflow-x:hidden;
+}
+
+/* NAVIGATION */
+nav{
+position:fixed;top:0;left:0;right:0;
+display:flex;align-items:center;justify-content:space-between;
+padding:1.2rem 5vw;
+background:rgba(7,20,40,.9);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+z-index:100;
+}
+.logo{
+font-family:'Bebas Neue',sans-serif;
+font-size:2rem;letter-spacing:.1em;
+}
+.logo span{color:var(--green-light)}
+nav ul{
+list-style:none;display:flex;gap:2rem;
+}
+nav a{
+text-decoration:none;
+color:var(--muted);
+font-size:.85rem;
+text-transform:uppercase;
+letter-spacing:.1em;
+}
+nav a:hover{color:white}
+.nav-cta{
+background:var(--green);
+color:white!important;
+padding:.5rem 1.2rem;
+border-radius:4px;
+}
+
+/* MOBILE MENU */
+.menu-toggle{
+display:none;
+font-size:1.6rem;
+cursor:pointer;
+}
+@media(max-width:768px){
+nav ul{
+display:none;
+position:absolute;
+top:70px;right:5vw;
+flex-direction:column;
+background:var(--navy);
+padding:1.5rem;
+border-radius:8px;
+}
+nav ul.active{display:flex}
+.menu-toggle{display:block}
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:8rem 5vw 4rem;
+background:linear-gradient(160deg,var(--deep),#0D2640);
+}
+.hero h1{
+font-family:'Bebas Neue',sans-serif;
+font-size:clamp(4rem,10vw,8rem);
+line-height:.95;
+}
+.hero h1 em{
+font-family:'DM Serif Display',serif;
+color:var(--gold);
+font-style:italic;
+}
+.hero p{
+max-width:600px;
+margin:1.5rem auto 0;
+color:var(--muted);
+line-height:1.7;
+}
+.btn{
+display:inline-block;
+margin-top:2rem;
+background:var(--green);
+padding:.9rem 2rem;
+color:white;
+text-decoration:none;
+border-radius:5px;
+transition:.2s;
+}
+.btn:hover{
+background:var(--green-light);
+transform:translateY(-3px);
+}
+
+/* CONTACT */
+#contact{
+padding:6rem 5vw;
+text-align:center;
+background:var(--navy);
+}
+#contact h2{
+font-family:'DM Serif Display',serif;
+font-size:2.5rem;
+}
+#contact p{
+color:var(--muted);
+margin-top:1rem;
+}
+.contact-buttons{
+margin-top:2rem;
+display:flex;
+gap:1rem;
+justify-content:center;
+flex-wrap:wrap;
+}
+.whatsapp{
+background:#25D366;
+}
+.email{
+background:transparent;
+border:1px solid var(--border);
+}
+
+/* FOOTER */
+footer{
+padding:2rem 5vw;
+text-align:center;
+border-top:1px solid var(--border);
+color:var(--muted);
+}
+
+/* ANIMATIONS */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:.6s ease;
+}
+.fade.visible{
+opacity:1;
+transform:none;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">P<span>A</span>TA</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul id="menu">
+<li><a href="#contact" class="nav-cta">Get Started</a></li>
+</ul>
+</nav>
+
+<section class="hero fade">
+<div>
+<h1>Smarter<br><em>Sourcing.</em><br>Better Access.</h1>
+<p>
+PATA connects businesses, traders, and contractors to affordable sources
+across multiple product categories — without the procurement headache.
+</p>
+<a href="#contact" class="btn">Start Sourcing →</a>
+</div>
+</section>
+
+<section id="contact" class="fade">
+<h2>Ready to source <em>smarter?</em></h2>
+<p>
+Reach out via WhatsApp or email and we'll respond with sourcing options.
+</p>
+
+<div class="contact-buttons">
+<a href="https://wa.me/254718373781?text=Hello%20PATA%2C%20I'm%20interested%20in%20sourcing%20assistance" target="_blank" class="btn whatsapp">
+WhatsApp Us
+</a>
+
+<a href="mailto:ahmed.abeid@projectmila.com" class="btn email">
+Send an Email
+</a>
+</div>
+</section>
+
+<footer>
+© 2025 PATA — Products Access Total Advantage
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add("visible")}
+});
+});
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
