@@ -3,235 +3,526 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>PATA | Smarter Sourcing. Better Access.</title>
-<meta name="description" content="PATA connects businesses, traders, and contractors to affordable sources across multiple categories. Smarter sourcing. Better access.">
-<meta name="keywords" content="procurement, sourcing, suppliers, wholesale, contractors, traders, Kenya">
-<meta name="author" content="PATA">
-
-<link rel="icon" type="image/png" href="favicon.png">
-
+<title>PATA – Products Access Total Advantage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
---navy:#0B1F3A;
---deep:#071428;
---green:#1B7A5A;
---green-light:#26A87A;
---gold:#C8A84B;
---white:#F4F2EC;
---muted:#8A9BAD;
---card:rgba(255,255,255,0.04);
---border:rgba(255,255,255,0.08);
-}
-html{scroll-behavior:smooth}
-body{
-font-family:'DM Sans',sans-serif;
-background:var(--deep);
-color:var(--white);
-overflow-x:hidden;
-}
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* NAVIGATION */
-nav{
-position:fixed;top:0;left:0;right:0;
-display:flex;align-items:center;justify-content:space-between;
-padding:1.2rem 5vw;
-background:rgba(7,20,40,.9);
-backdrop-filter:blur(10px);
-border-bottom:1px solid var(--border);
-z-index:100;
-}
-.logo{
-font-family:'Bebas Neue',sans-serif;
-font-size:2rem;letter-spacing:.1em;
-}
-.logo span{color:var(--green-light)}
-nav ul{
-list-style:none;display:flex;gap:2rem;
-}
-nav a{
-text-decoration:none;
-color:var(--muted);
-font-size:.85rem;
-text-transform:uppercase;
-letter-spacing:.1em;
-}
-nav a:hover{color:white}
-.nav-cta{
-background:var(--green);
-color:white!important;
-padding:.5rem 1.2rem;
-border-radius:4px;
-}
+  :root {
+    --navy: #0B1F3A;
+    --deep: #071428;
+    --green: #1B7A5A;
+    --green-light: #26A87A;
+    --gold: #C8A84B;
+    --white: #F4F2EC;
+    --muted: #8A9BAD;
+    --card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.08);
+  }
 
-/* MOBILE MENU */
-.menu-toggle{
-display:none;
-font-size:1.6rem;
-cursor:pointer;
-}
-@media(max-width:768px){
-nav ul{
-display:none;
-position:absolute;
-top:70px;right:5vw;
-flex-direction:column;
-background:var(--navy);
-padding:1.5rem;
-border-radius:8px;
-}
-nav ul.active{display:flex}
-.menu-toggle{display:block}
-}
+  html { scroll-behavior: smooth; }
 
-/* HERO */
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:8rem 5vw 4rem;
-background:linear-gradient(160deg,var(--deep),#0D2640);
-}
-.hero h1{
-font-family:'Bebas Neue',sans-serif;
-font-size:clamp(4rem,10vw,8rem);
-line-height:.95;
-}
-.hero h1 em{
-font-family:'DM Serif Display',serif;
-color:var(--gold);
-font-style:italic;
-}
-.hero p{
-max-width:600px;
-margin:1.5rem auto 0;
-color:var(--muted);
-line-height:1.7;
-}
-.btn{
-display:inline-block;
-margin-top:2rem;
-background:var(--green);
-padding:.9rem 2rem;
-color:white;
-text-decoration:none;
-border-radius:5px;
-transition:.2s;
-}
-.btn:hover{
-background:var(--green-light);
-transform:translateY(-3px);
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--deep);
+    color: var(--white);
+    overflow-x: hidden;
+  }
 
-/* CONTACT */
-#contact{
-padding:6rem 5vw;
-text-align:center;
-background:var(--navy);
-}
-#contact h2{
-font-family:'DM Serif Display',serif;
-font-size:2.5rem;
-}
-#contact p{
-color:var(--muted);
-margin-top:1rem;
-}
-.contact-buttons{
-margin-top:2rem;
-display:flex;
-gap:1rem;
-justify-content:center;
-flex-wrap:wrap;
-}
-.whatsapp{
-background:#25D366;
-}
-.email{
-background:transparent;
-border:1px solid var(--border);
-}
+  /* ---- NAV ---- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 5vw;
+    background: rgba(7,20,40,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+  }
+  .logo span { color: var(--green-light); }
+  nav ul { list-style: none; display: flex; gap: 2.5rem; }
+  nav ul a {
+    text-decoration: none; color: var(--muted);
+    font-size: 0.88rem; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  nav ul a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--green); color: var(--white) !important;
+    padding: 0.55rem 1.4rem; border-radius: 4px;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--green-light) !important; color: var(--white) !important; }
 
-/* FOOTER */
-footer{
-padding:2rem 5vw;
-text-align:center;
-border-top:1px solid var(--border);
-color:var(--muted);
-}
+  /* ---- HERO ---- */
+  .hero {
+    min-height: 100vh;
+    display: grid; place-items: center;
+    position: relative; overflow: hidden;
+    padding: 8rem 5vw 4rem;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(27,122,90,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 70%, rgba(11,31,58,0.8) 0%, transparent 80%),
+      linear-gradient(160deg, var(--deep) 40%, #0D2640 100%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: linear-gradient(var(--white) 1px, transparent 1px),
+      linear-gradient(90deg, var(--white) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 900px;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(27,122,90,0.2);
+    border: 1px solid rgba(27,122,90,0.5);
+    color: var(--green-light);
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 50px;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero h1 em {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--muted);
+    max-width: 600px; margin: 1.5rem auto 0;
+    line-height: 1.7; font-weight: 300;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    margin-top: 2.5rem;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+  .btn-primary {
+    background: var(--green); color: var(--white);
+    padding: 0.85rem 2rem; border-radius: 5px;
+    text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--green-light); transform: translateY(-2px); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 0.85rem 2rem; border-radius: 5px;
+    text-decoration: none; font-weight: 500; font-size: 0.95rem;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
 
-/* ANIMATIONS */
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:.6s ease;
-}
-.fade.visible{
-opacity:1;
-transform:none;
-}
+  .hero-stats {
+    display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap;
+    margin-top: 4rem; padding-top: 3rem;
+    border-top: 1px solid var(--border);
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem; color: var(--gold); letter-spacing: 0.05em;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.2rem; }
+
+  /* ---- SECTIONS ---- */
+  section { padding: 6rem 5vw; }
+  .section-label {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--green-light);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    max-width: 600px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  /* ---- HOW IT WORKS ---- */
+  #how { background: var(--navy); }
+  .how-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5px; margin-top: 3.5rem;
+    border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden;
+  }
+  .how-card {
+    background: var(--card); padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border);
+    transition: background 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .how-card:last-child { border-right: none; }
+  .how-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .how-card:hover { background: rgba(255,255,255,0.07); }
+  .how-card:hover::before { transform: scaleX(1); }
+  .how-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem; color: rgba(255,255,255,0.06);
+    line-height: 1; margin-bottom: 1rem;
+  }
+  .how-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.6rem; }
+  .how-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; font-weight: 300; }
+
+  /* ---- CATEGORIES ---- */
+  #categories { background: var(--deep); }
+  .cat-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem; margin-top: 3rem;
+  }
+  .cat-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.8rem 1.5rem;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: default;
+  }
+  .cat-card:hover { border-color: var(--green-light); transform: translateY(-4px); }
+  .cat-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+  .cat-name { font-weight: 600; font-size: 0.95rem; }
+  .cat-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; }
+
+  /* ---- WHO WE SERVE ---- */
+  #clients { background: var(--navy); }
+  .clients-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .client-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 2rem;
+    transition: border-color 0.3s;
+  }
+  .client-card:hover { border-color: var(--gold); }
+  .client-type {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem; letter-spacing: 0.08em;
+    color: var(--gold); margin-bottom: 0.6rem;
+  }
+  .client-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+  .client-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .tag {
+    font-size: 0.72rem; padding: 0.25rem 0.7rem;
+    background: rgba(27,122,90,0.15); border: 1px solid rgba(27,122,90,0.3);
+    border-radius: 50px; color: var(--green-light); font-weight: 500;
+  }
+
+  /* ---- WHY PATA ---- */
+  #why { background: var(--deep); }
+  .why-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center; margin-top: 3rem;
+  }
+  .why-points { display: flex; flex-direction: column; gap: 1.5rem; }
+  .why-point { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .why-dot {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(27,122,90,0.2); border: 1px solid var(--green);
+    display: grid; place-items: center; flex-shrink: 0;
+    font-size: 0.8rem; color: var(--green-light); font-weight: 700;
+  }
+  .why-text strong { font-weight: 600; display: block; margin-bottom: 0.2rem; font-size: 0.95rem; }
+  .why-text span { color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+  .why-visual {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 3rem 2.5rem;
+    position: relative; overflow: hidden;
+  }
+  .why-visual::after {
+    content: 'PATA';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10rem; letter-spacing: 0.1em;
+    position: absolute; bottom: -2rem; right: -1.5rem;
+    color: rgba(255,255,255,0.025); line-height: 1; pointer-events: none;
+  }
+  .tagline-display {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem; line-height: 1.25;
+    color: var(--white);
+  }
+  .tagline-display em { font-style: italic; color: var(--gold); }
+  .tagline-sub { color: var(--muted); margin-top: 1.2rem; font-size: 0.9rem; line-height: 1.6; }
+  .advantage-pills { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 2rem; }
+  .pill {
+    display: flex; align-items: center; gap: 0.7rem;
+    font-size: 0.85rem; font-weight: 500; color: var(--white);
+  }
+  .pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-light); }
+
+  /* ---- CONTACT ---- */
+  #contact {
+    background: linear-gradient(135deg, var(--navy) 0%, #0D2E1C 100%);
+    text-align: center;
+  }
+  .contact-inner { max-width: 620px; margin: 0 auto; }
+  .contact-inner .section-title { max-width: 100%; }
+  .contact-inner p { color: var(--muted); margin-top: 1rem; font-size: 0.95rem; line-height: 1.7; }
+  .contact-channels {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+  .channel-btn {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.85rem 1.8rem; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .channel-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .channel-wa { background: #25D366; color: #fff; }
+  .channel-email { background: var(--card); color: var(--white); border: 1px solid var(--border); }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--deep); border-top: 1px solid var(--border);
+    padding: 2.5rem 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem; letter-spacing: 0.1em;
+    color: var(--white);
+  }
+  .footer-logo span { color: var(--green-light); }
+  .footer-tagline { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.1em; margin-top: 0.2rem; }
+  .footer-copy { font-size: 0.78rem; color: var(--muted); }
+
+  /* ---- ANIMATIONS ---- */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 768px) {
+    nav ul { display: none; }
+    .why-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { gap: 1.5rem; }
+  }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-<div class="logo">P<span>A</span>TA</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<ul id="menu">
-<li><a href="#contact" class="nav-cta">Get Started</a></li>
-</ul>
+  <div class="logo">P<span>A</span>TA</div>
+  <ul>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#why">Why PATA</a></li>
+    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+  </ul>
 </nav>
 
-<section class="hero fade">
-<div>
-<h1>Smarter<br><em>Sourcing.</em><br>Better Access.</h1>
-<p>
-PATA connects businesses, traders, and contractors to affordable sources
-across multiple product categories — without the procurement headache.
-</p>
-<a href="#contact" class="btn">Start Sourcing →</a>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Products Access Total Advantage</div>
+    <h1>Smarter<br><em>Sourcing.</em><br>Better Access.</h1>
+    <p class="hero-sub">PATA connects businesses, traders, and contractors to competitive suppliers and quality products across multiple categories — without the procurement headache.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Start Sourcing →</a>
+      <a href="#how" class="btn-secondary">How It Works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">Product Categories</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Inventory Overhead</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Sourcing Partner</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="fade">
-<h2>Ready to source <em>smarter?</em></h2>
-<p>
-Reach out via WhatsApp or email and we'll respond with sourcing options.
-</p>
-
-<div class="contact-buttons">
-<a href="https://wa.me/254718373781?text=Hello%20PATA%2C%20I'm%20interested%20in%20sourcing%20assistance" target="_blank" class="btn whatsapp">
-WhatsApp Us
-</a>
-
-<a href="mailto:ahmed.abeid@projectmila.com" class="btn email">
-Send an Email
-</a>
-</div>
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">Process</div>
+  <h2 class="section-title">Procurement made <em>simple</em></h2>
+  <div class="how-grid reveal">
+    <div class="how-card">
+      <div class="how-num">01</div>
+      <div class="how-title">Share Your Requirements</div>
+      <div class="how-desc">Tell us what you need — product type, quantity, specifications, and your target price. We handle the rest.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">02</div>
+      <div class="how-title">We Source &amp; Match</div>
+      <div class="how-desc">PATA taps its supplier network to find the best-fit options, comparing quality and pricing on your behalf.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">03</div>
+      <div class="how-title">Review &amp; Confirm</div>
+      <div class="how-desc">You receive a clear sourcing proposal. No pressure — review your options and decide what works for you.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">04</div>
+      <div class="how-title">We Facilitate Delivery</div>
+      <div class="how-desc">Once confirmed, we coordinate supply and keep you informed every step of the way.</div>
+    </div>
+  </div>
 </section>
 
-<footer>
-© 2025 PATA — Products Access Total Advantage
-</footer>
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="section-label">What We Source</div>
+  <h2 class="section-title">Multi-category <em>procurement</em></h2>
+  <div class="cat-grid reveal">
+    <div class="cat-card">
+      <div class="cat-icon">🏠</div>
+      <div class="cat-name">Household & Appliances</div>
+      <div class="cat-note">Home essentials & electronics</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">⚡</div>
+      <div class="cat-name">Electrical & Auto Spares</div>
+      <div class="cat-note">Parts, fittings & components</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🏗️</div>
+      <div class="cat-name">Construction Materials</div>
+      <div class="cat-note">Building & structural supplies</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🔧</div>
+      <div class="cat-name">Interior & Tools</div>
+      <div class="cat-note">Fit-out materials & equipment</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">💄</div>
+      <div class="cat-name">Cosmetics & Personal Care</div>
+      <div class="cat-note">Beauty & hygiene products</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🌾</div>
+      <div class="cat-name">Agricultural Products</div>
+      <div class="cat-note">Farm inputs & supplies</div>
+    </div>
+  </div>
+  <p style="color:var(--muted); margin-top:1.5rem; font-size:0.85rem;">Don't see your category? We adapt to sourcing needs. <a href="#contact" style="color:var(--green-light); text-decoration:none;">Ask us →</a></p>
+</section>
 
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
+<!-- WHO WE SERVE -->
+<section id="clients">
+  <div class="section-label">Who We Serve</div>
+  <h2 class="section-title">Built for <em>trade professionals</em></h2>
+  <div class="clients-grid reveal">
+    <div class="client-card">
+      <div class="client-type">Traders & Resellers</div>
+      <div class="client-desc">Access competitive supply for your retail or resale business without going directly to multiple suppliers.</div>
+      <div class="client-tags">
+        <span class="tag">Retailers</span>
+        <span class="tag">Hardware Shops</span>
+        <span class="tag">Auto Dealers</span>
+        <span class="tag">Market Traders</span>
+      </div>
+    </div>
+    <div class="client-card">
+      <div class="client-type">Contractors & Service Providers</div>
+      <div class="client-desc">Source materials efficiently for your projects. Competitive pricing, reliable timelines — so you can deliver on schedule.</div>
+      <div class="client-tags">
+        <span class="tag">Construction</span>
+        <span class="tag">Interior Fit-out</span>
+        <span class="tag">Electrical</span>
+        <span class="tag">Agricultural</span>
+      </div>
+    </div>
+    <div class="client-card">
+      <div class="client-type">SMEs & Businesses</div>
+      <div class="client-desc">Streamline your procurement. Whether you have a dedicated team or not, PATA handles the sourcing so you focus on your business.</div>
+      <div class="client-tags">
+        <span class="tag">Procurement Teams</span>
+        <span class="tag">Workshops</span>
+        <span class="tag">SMEs</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add("visible")}
-});
-});
-document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
-</script>
-
-</body>
-</html>
+<!-- WHY PATA -->
+<section id="why">
+  <div class="section-label">Our Edge</div>
+  <h2 class="section-title">The sourcing <em>advantage</em></h2>
+  <div class="why-layout">
+    <div class="why-points reveal">
+      <div class="why-point">
+        <div class="why-dot">✓</div>
+        <div class="why-text">
+          <strong>Supplier Network Access</strong>
+          <span>We've built relationships with vetted suppliers across categories, giving you access you'd spend months building yourself.</span>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-dot">✓</div>
+        <div class="why-text">
+          <strong>Competitive Pricing</strong>
+          <span>By aggregating demand and leveraging supplier relationships, we unlock better pricing than retail channels.</span>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-dot">✓</div>
+        <div class="why-text">
+          <strong>Multi-category Procurement</strong>
+          <span>One partner for multiple categories. Fewer vendors, simpler logistics, cleaner procurement.</span>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-dot">✓</div>
+        <div class="why-text">
+          <strong>No Inventory Overhead</strong>
+          <span>PATA operates as a lean intermediary — no warehouse costs passed to you, just sourcing value.</span>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-dot">✓</div>
+        <div class="why-text">
+          <strong>Relationship-Driven</strong>
+          <span>We invest in long-term partnerships, not one-off transactions. Your procurement grows with us.</span>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <div class="tagline-display">"We are not a retailer.<br>We are a<br><e
